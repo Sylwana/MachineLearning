@@ -6,9 +6,10 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Dataset import
+# use dot-separated numbers in cells for easier translation to float format
 dataset = pd.read_csv('Crowdfunding_stats.csv', sep=',')
-X = dataset.iloc[:, 1:2].values
-y = dataset.iloc[:, 13].values
+X = dataset.iloc[:, 1:2].values  # one column at a time, GDP column here
+y = dataset.iloc[:, 13].value
 
 # if there is any NaN value - convert to 0
 X[np.isnan(X)] = 0
