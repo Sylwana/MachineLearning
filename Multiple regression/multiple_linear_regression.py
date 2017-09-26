@@ -50,3 +50,4 @@ regressor_OLS.summary()
 X_opt = X[:, [0,6,8,10]]
 regressor_OLS = sm.OLS(endog = y, exog = X_opt).fit()
 regressor_OLS.summary()
+
