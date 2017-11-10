@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-# Importing the dataset - impact of price and number of accomodations
+# Importing the dataset - impact of price and number of accommodations
 dataset = pd.read_csv('airbnb_warsaw_without_outliers.csv',sep=';')
 X = dataset.iloc[:, [7, 9]].values
 y = dataset.iloc[:, 4].values
@@ -92,9 +92,9 @@ visualizeResults(X_test, y_test)
 
 # good prediction ratio = 0.50194
 
-# Apparently, the number of people accomodated at the place
-# (or maximum number of people, that can be accomodated) 
-# is a better indicator of the popularity of accomodations.
+# Apparently, the number of people accommodated at the place
+# (or maximum number of people, that can be accommodated) 
+# is a better indicator of the popularity of accommodations.
 # It seems quite reasonalbe: "number of guests" is a factor we
 # usualy filter the places by most usually. "Number of bedrooms"
 # is a filter that is more hidden on the Airbnb site and thus
@@ -102,11 +102,11 @@ visualizeResults(X_test, y_test)
 
 # In general, as anticipated, the number of guests is a variable
 # positively correlated with the popularity of places. However,
-# places with small number of accomodations aren't excluded from
+# places with small number of accommodations aren't excluded from
 # people's choice. 
 # What is more importnt here is price. Judging by the plot, it
 # is obvious that the lower the price, the higher the probability
 # of chosing a specific place. A bit higher price is accepted
-# only when the place can accomodate high number of guests.
+# only when the place can accomomdate high number of guests.
     
 
